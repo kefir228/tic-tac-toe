@@ -4,7 +4,7 @@ export function calculateWinner(board: (string | null)[]): string | null {
         [0,3,6],[1,4,7],[2,5,8],
         [0,4,8],[2,4,6]
     ]
-    for(let [a,b,c] of lines){
+    for(const [a,b,c] of lines){
         if(board[a]&&board[a]===board[b] && board[a]===board[c]){
             return board[a]
         }
