@@ -7,7 +7,7 @@ export const getBotMove = (board: string[]): number | null => {
 
     if (avaliableMoves.length === 0) return null
 
-    for (let move of avaliableMoves) {
+    for (const move of avaliableMoves) {
         const testBoard = [...board]
         testBoard[move] = '0'
         if (calculateWinner(testBoard) === '0') {
@@ -15,7 +15,7 @@ export const getBotMove = (board: string[]): number | null => {
         }
     }
 
-    for (let move of avaliableMoves) {
+    for (const move of avaliableMoves) {
         const testBoard = [...board]
         testBoard[move] = 'X'
         if (calculateWinner(testBoard) === 'X') {
